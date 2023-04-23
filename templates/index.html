@@ -2,20 +2,51 @@
 <html>
   <head>
     <title>Medical Codexes</title>
+    <style>
+      table {
+        border-collapse: collapse;
+        width: 100%;
+      }
+      th, td {
+        text-align: left;
+        padding: 8px;
+        border: 1px solid #ddd;
+      }
+      th {
+        background-color: #f2f2f2;
+      }
+    </style>
   </head>
   <body>
     <h1>Medical Codexes</h1>
     <h2>Codex 1</h2>
-    <ul>
+    <table>
+      <tr>
+        <th>Code</th>
+        <th>Condition</th>
+      </tr>
       {% for key, value in codex1.items() %}
-        <li>{{ key }} - {{ value }}</li>
+        <tr>
+          <td>{{ key }}</td>
+          <td>{{ value }}</td>
+        </tr>
       {% endfor %}
-    </ul>
+    </table>
     <h2>Codex 2</h2>
-    <ul>
+    <table>
+      <tr>
+        <th>Code</th>
+        <th>Category</th>
+      </tr>
       {% for key, value in codex2.items() %}
-        <li>{{ key }} - {{ value }}</li>
+        <tr>
+          <td>{{ key }}</td>
+          <td>{{ value }}</td>
+        </tr>
       {% endfor %}
-    </ul>
+    </table>
   </body>
 </html>
+
+
+
