@@ -1,0 +1,21 @@
+<!doctype html>
+<html>
+  <head>
+    <title>Medical Codexes</title>
+  </head>
+  <body>
+    <h1>Medical Codexes</h1>
+    <h2>Codex 1</h2>
+    <ul>
+      {% for key, value in codex1.items() %}
+        <li>{{ key }} - {{ value }}</li>
+      {% endfor %}
+    </ul>
+    <h2>Codex 2</h2>
+    <ul>
+      {% for key, value in codex2.items() %}
+        <li>{{ key }} - {{ value }}</li>
+      {% endfor %}
+    </ul>
+  </body>
+</html>
