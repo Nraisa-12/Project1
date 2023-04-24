@@ -13,15 +13,17 @@ codex2 = {
     "3": "Diseases of the blood and blood-forming organs"
 }
 
-@app.route('/api/codex1')
-def get_codex1():
-    return jsonify(codex1)
+codex = {
+    "codex1": codex1,
+    "codex2": codex2
+}
 
-@app.route('/api/codex2')
-def get_codex2():
-    return jsonify(codex2)
+@app.route('/')
+def get_codex():
+    return jsonify(codex)
 
 if __name__ == '__main__':
     app.run(debug=True)
+
 
 
