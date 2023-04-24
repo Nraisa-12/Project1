@@ -1,7 +1,6 @@
-from flask import Flask, jsonify, render_template
+from flask import Flask, jsonify
 
 app = Flask(__name__)
-
 
 codex1 = {
     "A": "Diabetes mellitus",
@@ -14,10 +13,6 @@ codex2 = {
     "3": "Diseases of the blood and blood-forming organs"
 }
 
-@app.route('/')
-def index():
-    return render_template('index.html', codex1=codex1, codex2=codex2)
-
 @app.route('/api/codex1')
 def get_codex1():
     return jsonify(codex1)
@@ -28,4 +23,5 @@ def get_codex2():
 
 if __name__ == '__main__':
     app.run(debug=True)
+
 
