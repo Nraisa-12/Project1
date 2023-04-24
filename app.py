@@ -2,7 +2,7 @@ from flask import Flask, jsonify, render_template
 
 app = Flask(__name__)
 
-# Two different medical codexes data
+
 codex1 = {
     "A": "Diabetes mellitus",
     "B": "Hypertension",
